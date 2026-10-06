@@ -1,0 +1,6 @@
+interface:
+  display_name: "Comic Explainer"
+  short_description: "Turn training and how-to guides into memorable comics"
+  default_prompt: "Use $comic-explainer to turn my training concept into a visual comic with short talking points and a clear next action."
+policy:
+  allow_implicit_invocation: true

@@ -1,281 +1,83 @@
-# Ian Xiaohei Illustrations
+# Comic Explainer
 
-> 把中文文章里的判断、流程、状态和隐喻，变成一张张白底、手绘、怪诞但清爽的正文配图。
->
-> 16:9 横版 | 小黑 IP | 纯白手绘 | 少量红橙蓝中文批注 | Codex Skill
+**Turn a rough explanation into a comic people can remember and use.**
 
----
+By **Mark Kentwell**, adapted from **Ian Xiaohei Illustrations** by [Ian (@ianneo_ai)](https://github.com/helloianneo/ian-xiaohei-illustrations). MIT licensed. This is a separate public fork of that one illustration skill, with a training and how-to workflow added.
 
-## 这个仓库是什么?
+![A character turns a spoken idea into a visual story and a next action](docs/comic-explainer.png)
 
-Ian Xiaohei Illustrations 是一个 Codex Skill，用来指导 AI Agent 为中文文章、帖子、博客、Notion 文档和方法论内容生成正文配图。
+## Start here
 
-它不是通用插画 prompt，也不是 PPT 信息图模板。它的核心目标是：先理解文章里的认知锚点，再把其中一个判断、流程、结构、状态或隐喻，变成一张有记忆点的 16:9 手绘解释图。
+- **[Get the free starter pack](https://comic-explainer-by-mk.netlify.app/)** — the skill ZIP, quick-start PDF and starter prompts.
+- **[Read the how-to guide](docs/QUICKSTART.md)** — what a skill is, installation and your first comic.
+- **[See a working nine-scene training example](https://presence-four-ways-sales.netlify.app/#1)** — images, pop-outs, presenter notes and a recording mode.
+- **[Open the skill](comic-explainer/SKILL.md)** — the instructions your agent reads.
+- **[Understand the MIT licence](docs/LICENCE-EXPLAINED.md)** — plain English, with original sources.
 
-默认视觉 IP 是“小黑”：一个黑色实心、白点眼、细腿、空表情的小角色。小黑不是吉祥物，不是贴纸，也不是站在角落里的装饰物，而是正在认真参与系统运转的荒诞工作者。
+If you came from Mark's video, **“comment EXPLAINER”** gets this pack. The installed skill is called **Comic Explainer** and its agent handle is **`$comic-explainer`**. “EXPLAINER” is the comment keyword; it is not a separate app.
 
-一句话：**让 AI 不只是“配一张图”，而是把文章里的一个关键认知动作画出来。**
+## What it makes
 
----
+A visual sequence from a voice note, transcript, training concept or how-to:
 
-## 适合谁用
+1. A storyboard with one memorable idea per scene.
+2. Individual hand-drawn illustrations with short labels.
+3. Concise talking points and suggested pacing.
+4. An optional interactive presentation with expandable detail.
+5. A practical next action for the audience.
 
-特别适合：
+An image-capable agent or connector is needed to render pictures. Without one, the skill can prepare the storyboard and prompts. It is a set of instructions, not a new AI model, renderer or hosting subscription. Usage charges for your chosen tools may apply.
 
-- 写中文文章，需要正文配图和文章插图的人
-- 做知识型内容、方法论内容、AI 工作流内容的人
-- 想把抽象判断画成具体隐喻的人
-- 想要一种比 PPT 信息图更轻、更怪、更有个人识别度的配图风格的人
-- 用 Codex 做内容生产，希望稳定复用一套视觉语言的人
-
-不适合：
-
-- 想要商业插画、品牌 KV 或精致扁平插画的人
-- 想要传统 PPT 信息图、复杂架构图或流程图的人
-- 想要儿童卡通、可爱 IP、表情包风格的人
-- 想把大量正文、长段解释或完整课程页塞进一张图里的人
-- 需要严格可编辑矢量源文件的人
-
----
-
-## 它会产出什么
-
-默认输出：
-
-- 16:9 横版正文配图
-- 一篇文章的 4-8 张 shot list
-- 每张图的主题、核心意思、结构类型、小黑动作和中文标注建议
-- 最终 PNG 图片，保存到 workspace 的 `assets/<article-slug>-illustrations/`
-
-默认不输出：
-
-- PPTX / PDF / Keynote
-- SVG / HTML / Canvas 可编辑图
-- 商业海报或封面 KV
-- 大段文字型信息图
-
----
-
-## 视觉风格
-
-这个 skill 默认使用 Ian 的“小黑怪诞正文配图”风格：
-
-- 纯白背景，不要纸纹、米色、阴影、渐变
-- 黑色手绘线稿，细线，轻微抖动
-- 大量留白，主体只占画面约 40%-60%
-- 少量红色、橙色、蓝色中文手写批注
-- 一张图只表达一个核心动作、结构、状态或隐喻
-- 小黑必须参与核心动作，不能只是装饰
-- 怪诞、有创意、清爽，但不幼稚、不卖萌
-
----
-
-## 示例效果
-
-### 两个断点
-
-![两个断点](examples/images/01-two-breakpoints.png)
-
-### 按目的分拣
-
-![按目的分拣](examples/images/02-sort-by-purpose.png)
-
-### 一鱼多吃
-
-![一鱼多吃](examples/images/03-one-fish-many-uses.png)
-
-### 承接路径
-
-![承接路径](examples/images/04-handoff-path.png)
-
-### 信息井
-
-![信息井](examples/images/05-information-well.png)
-
-### 想法压机
-
-![想法压机](examples/images/06-idea-press.png)
-
-### 内容发酵
-
-![内容发酵](examples/images/07-content-fermentation.png)
-
-### 信任桥
-
-![信任桥](examples/images/08-trust-bridge.png)
-
-这些图片是风格校准样例，不是构图模板。使用时应该从当前文章重新发明隐喻，不要照抄旧案例的物件和构图。
-
----
-
-## 安装
-
-克隆仓库：
-
-```bash
-git clone https://github.com/helloianneo/ian-xiaohei-illustrations.git
-cd ian-xiaohei-illustrations
-```
-
-复制 skill 到 Codex skills 目录：
-
-```bash
-mkdir -p "${CODEX_HOME:-$HOME/.codex}/skills"
-cp -R ./ian-xiaohei-illustrations "${CODEX_HOME:-$HOME/.codex}/skills/"
-```
-
-安装后，在 Codex 里使用：
+## Your first prompt
 
 ```text
-Use $ian-xiaohei-illustrations 为这篇中文文章设计并生成 5 张小黑怪诞正文配图。
+Use $comic-explainer.
+Turn the explanation below into a six-scene comic for my team.
+Label everything in English.
+Make each scene teach one idea and show one clear physical action.
+Add short talking points for a 10-minute walkthrough.
+Finish with one action the team can practise today.
+Generate the illustrations using the image tools available here.
+Keep extra detail in the notes.
+
+[Paste your explanation here.]
 ```
 
----
+Ask for a plan first if you want to shape the story before generating. Ask for an interactive website and name your preferred host if you want a shareable deck. The skill does not publish anything by itself.
 
-## 怎么用
+## Install in Codex
 
-### 只做配图规划
+Download the starter ZIP and extract it. Copy the **`comic-explainer` folder**, including its references, licence and notice, into your Codex skills directory: `${CODEX_HOME}/skills` if you use a custom Codex home; otherwise `~/.codex/skills`. Do not copy only SKILL.md.
 
-```text
-Use $ian-xiaohei-illustrations 先不要生图。
-请分析下面这篇文章哪里值得配图，输出 5 张左右的 shot list。
-每张图写清楚：放在哪段后、主题、核心意思、结构类型、小黑在做什么、建议中文标注词。
+In a terminal, after cloning this repo:
 
-<粘贴文章>
+```sh
+git clone https://github.com/markkentwell-presence/comic-explainer.git
+cd comic-explainer
+skill_root="${CODEX_HOME:-$HOME/.codex}/skills"
+mkdir -p "$skill_root"
+if [ -e "$skill_root/comic-explainer" ]; then
+  echo "Comic Explainer already exists. Preserve it before updating."
+else
+  cp -R ./comic-explainer "$skill_root/"
+fi
 ```
 
-### 直接生成正文配图
+Then start a new agent session and invoke `$comic-explainer`. On another skill-enabled agent, use its documented skill folder or ask it to install this specific public repo. In a regular chat interface without skill installation, provide SKILL.md and the linked references as instructions; that is not the same as an installed skill.
 
-```text
-Use $ian-xiaohei-illustrations 把下面这篇文章生成 4 张小黑怪诞正文配图。
-要求：16:9 横版、纯白背景、黑色手绘线稿、少量红橙蓝中文手写批注。
+## What Mark changed
 
-<粘贴文章>
-```
+- English-first labels and a short, memorable name.
+- A comic training arc, rather than isolated article illustrations.
+- Speaker notes, timing, practice questions and a concrete final action.
+- Optional interactive decks, with phone-friendly detail and a clean recording view.
+- Explicit checks for counts, thresholds and spatial logic.
+- Guidance for preserving editable sources and publishing only agreed material.
 
-### 为单个概念生成一张图
+Ian's core visual language remains credited: white backgrounds, black hand-drawn linework, restrained coloured annotations, and the active, deadpan Xiaohei character. See [NOTICE.md](NOTICE.md) and [LICENSE](LICENSE). Mark's additions are also offered under MIT. This fork does not claim Ian's endorsement.
 
-```text
-Use $ian-xiaohei-illustrations 为“信任不是喊出来的，而是一块证据一块证据铺过去”生成一张正文配图。
-画面要怪诞但清爽，小黑必须承担核心动作。
-```
+## Examples and updates
 
-### 去掉图里的标题或错误文字
+Try the [example prompts](examples/prompts.md). The current skill package is inside `comic-explainer/`; guides and images are outside it. No private business repository, client transcript, credential or team skill bundle is included.
 
-```text
-Use $ian-xiaohei-illustrations 帮我编辑这张图，去掉左上角的“流程图”标题，其他内容保持不变。
-```
-
-更多示例见 [examples/prompts.md](examples/prompts.md)。
-
----
-
-## 工作流程
-
-这个 skill 的流程是：
-
-1. 读取文章、Markdown、Notion 内容、截图或用户给的主题
-2. 提炼核心观点、认知转折、流程结构和适合视觉化的段落
-3. 先输出 shot list：每张图只选一个认知锚点
-4. 为每张图选择结构类型：Workflow、系统局部、前后对比、角色状态、概念隐喻、方法分层、地图路线或小漫画分镜
-5. 重新发明一个低科技、怪诞但成立的物理隐喻
-6. 让小黑承担核心动作
-7. 每张图单独调用图像模型生成
-8. 按 QA checklist 检查：白底、留白、小黑动作、中文标注、非 PPT 感、非旧案例复刻
-9. 保存最终 PNG，并报告用途和路径
-
----
-
-## 目录结构
-
-```text
-.
-├── README.md
-├── LICENSE
-├── NOTICE.md
-├── assets/
-│   └── ian-wechat-qr.jpg
-├── examples/
-│   ├── images/
-│   │   ├── 01-two-breakpoints.png
-│   │   ├── 02-sort-by-purpose.png
-│   │   └── ...
-│   └── prompts.md
-└── ian-xiaohei-illustrations/
-    ├── SKILL.md
-    ├── agents/
-    │   └── openai.yaml
-    ├── assets/
-    │   └── examples/
-    └── references/
-        ├── style-dna.md
-        ├── xiaohei-ip.md
-        ├── composition-patterns.md
-        ├── prompt-template.md
-        └── qa-checklist.md
-```
-
-真正需要安装到 Codex 的是子目录：
-
-```text
-ian-xiaohei-illustrations/
-```
-
-根目录的 README、LICENSE、NOTICE 和 examples 是 GitHub 分享文档。
-
----
-
-## 注意事项
-
-- 图片里的中文文字越短越稳定。
-- 每张图只讲一个核心结构，不要把文章做成说明书。
-- 小黑必须承担核心动作；如果去掉小黑画面仍然完全成立，说明小黑太装饰了。
-- 示例图只用于校准线条密度、留白、颜色克制和小黑参与方式，不要复刻构图。
-- AI 图像模型可能出现错字、幻觉标签、风格漂移或多余标题，生成后需要检查。
-- 如果中文错字严重，优先减少标注词并重生成。
-
----
-
-## 相关项目
-
-- [Ian Handdrawn PPT](https://github.com/helloianneo/ian-handdrawn-ppt) — 中文手绘技术 PPT-style 页面图生成 Skill
-- [Awesome Claude Code Skills](https://github.com/helloianneo/awesome-claude-code-skills) — Claude Code Skills / Agents / Plugins 精选合集
-- [Obsidian + Claude AI Second Brain](https://github.com/helloianneo/obsidian-ai-second-brain) — Obsidian + Claude AI 个人知识库搭建指南
-
----
-
-## 关于作者
-
-**Ian (伊恩)** — 产品设计师 / 一人公司实践者 / AI Builder
-
-用 AI 团队打造一人公司。
-
-- GitHub: [helloianneo](https://github.com/helloianneo)
-- X/Twitter: [@ianneo_ai](https://x.com/ianneo_ai)
-- 网站: [www.ianneo.xyz](https://www.ianneo.xyz)
-- 微信: `ianneoxyz`
-- 邮箱: hello.neoc@gmail.com
-
----
-
-## 继续探索
-
-这套小黑配图 Skill，只是我用 AI 搭建个人生产系统里的一个小工具。
-
-如果你也在用 AI 做内容、知识库、工作流或产品化，可以继续看我的网站：[www.ianneo.xyz](https://www.ianneo.xyz)。
-
-只想先观察，可以关注我的 [X/Twitter](https://x.com/ianneo_ai)。
-
-想了解 Indie Builders Club，加微信：`ianneoxyz`，备注「OPC」。
-
-<p>
-  <img src="assets/ian-wechat-qr.jpg" alt="Ian 微信二维码" width="120">
-</p>
-
-不方便扫码也可以搜索微信：`ianneoxyz`。
-
----
-
-## License
-
-MIT License. See [LICENSE](LICENSE).
+Version: **1.0.0**. See [CHANGELOG.md](CHANGELOG.md). Keep your prior local version before updating. Suggestions can be raised as GitHub issues; there is no automated messaging or deployment setup in the skill.

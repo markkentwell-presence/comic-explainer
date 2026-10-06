@@ -1,83 +1,62 @@
-# Prompt Examples
+# Prompts you can copy
 
-下面这些 prompt 可以直接复制到 Codex 里使用。
-
-## 只做配图规划
+## A quick storyboard
 
 ```text
-Use $ian-xiaohei-illustrations 先不要生图。
-请分析下面这篇文章哪里值得配图，输出 5 张左右的 shot list。
-每张图写清楚：
-- 放在哪个段落后
-- 图的主题
-- 核心意思
-- 结构类型
-- 小黑在图里做什么
-- 建议元素
-- 建议中文标注词
-
-<粘贴文章>
+Use $comic-explainer. Storyboard only; do not generate images yet.
+Turn this concept into four scenes for a five-minute team explanation.
+Audience: new team members.
+Core idea: a handover works when the next person can act without guessing.
+Include a familiar problem, a concrete metaphor, a corrected action and a next move.
+Label everything in English.
+[Paste my explanation.]
 ```
 
-## 文章正文配图
+## Render a training story
 
 ```text
-Use $ian-xiaohei-illustrations 把下面这篇文章生成 4 张小黑怪诞正文配图。
-要求：16:9 横版、纯白背景、黑色手绘线稿、少量红橙蓝中文手写批注。
-每张图只讲一个核心结构，不要做 PPT 信息图，不要可爱卡通。
-
-<粘贴文章>
+Use $comic-explainer. Make a six-scene comic showing how to prepare for
+and run a useful customer discovery conversation.
+Use the process below as the source; do not invent customer results.
+Generate each illustration separately with the available image tool.
+Add talking points for a ten-minute walkthrough and one practice question.
+Keep one central action per scene.
+[Paste the process.]
 ```
 
-## 长文配图策略
+## A how-to with a common mistake
 
 ```text
-Use $ian-xiaohei-illustrations 给这篇长文做配图策略。
-不要平均配图，只挑认知锚点：核心判断、输入输出闭环、前后对比、常见坑、承接路径。
-默认 6-8 张，先输出 shot list，不要生成图片。
-
-<粘贴文章>
+Use $comic-explainer. Turn the instructions below into four pictures:
+the starting situation, the common mistake, the corrected action, and the finish.
+Audience: someone doing this for the first time.
+Keep exact quantities and sequence accurate. Ask about any missing safety-critical step.
+Show the action, not a decorative character beside paragraphs.
+[Paste the instructions.]
 ```
 
-## 单个观点生成一张图
+## A shareable presentation
 
 ```text
-Use $ian-xiaohei-illustrations 为这个观点生成一张 16:9 正文配图：
-
-信任不是喊出来的，而是一块证据一块证据铺过去。
-
-画面要怪诞但清爽，小黑必须承担核心动作。
-中文标注最多 5 个，短一点。
+Use $comic-explainer. Build the comic as a lightweight interactive website
+with large images, short headlines, arrow-key navigation, direct scene links,
+hover/focus/tap details and presenter notes. Add a clean recording view and
+a printable take-home guide. Prepare it locally and verify it.
+Use only the material I have marked public below.
+[Paste the public material.]
 ```
 
-## 工作流主题
+If you want it published, add your chosen host and explicitly request publication. Name the authorised account when relevant. No hosting account is bundled with this skill.
+
+## Edit one defect
 
 ```text
-Use $ian-xiaohei-illustrations 为“把一条原始素材加工成流量、信任、转化三种内容”生成一张图。
-不要画正式流程图，不要复刻一鱼多吃旧案例。
-请重新发明一个新的低科技隐喻，让小黑参与核心动作。
+Use $comic-explainer. Inspect scene 2, then correct only the misplaced arrow:
+it should show the object entering the open gate, not leaving it.
+Preserve the character, labels, colours and all other positions.
+Save the corrected version without overwriting the original.
 ```
 
-## 改图：去掉标题
+## Working example
 
-```text
-Use $ian-xiaohei-illustrations 帮我编辑这张图。
-去掉左上角的“Workflow / 流程图”标题和下划线，其他内容保持不变。
-不要新增任何文字或物件。
-```
-
-## 改图：增强小黑参与感
-
-```text
-Use $ian-xiaohei-illustrations 这张图方向对，但小黑有点像装饰。
-请保持核心意思不变，重生成一版：让小黑成为真正推动结构运转的人。
-画面更怪一点，但仍然纯白、清爽、少字。
-```
-
-## 生成一组风格样片
-
-```text
-Use $ian-xiaohei-illustrations 输出 5 个不同主题的小黑正文配图效果。
-主题分别覆盖：信息过载、产品验证、内容复利、一人公司、信任建立。
-每张单独生成，不要拼成一张。
-```
+[Four Ways to Get a Sale Moving](https://presence-four-ways-sales.netlify.app/#1) shows the training workflow used to develop this adaptation: nine English annotated images, a strong memory metaphor, practical levers, pop-out scripts, pacing and presenter controls. This example is real-estate training; the skill itself works across subjects.
